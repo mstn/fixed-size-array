@@ -1,0 +1,26 @@
+{
+  "name": "fixed-size-array",
+  "version": "0.0.0",
+  "description": "typescript types for fixed size arrays",
+  "types": "./src/index.d.ts",
+  "scripts": {
+    "deploy": "./scripts/deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mstn/fixed-size-array.git"
+  },
+  "keywords": [
+    "typescript",
+    "array"
+  ],
+  "author": "mstn@posteo.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mstn/fixed-size-array/issues"
+  },
+  "homepage": "https://github.com/mstn/fixed-size-array#readme",
+  "devDependencies": {
+    "typescript": "^2.7.2"
+  }
+}
