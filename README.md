@@ -9,6 +9,10 @@ configuration options are passed to a function.
 At the moment, we can use only immutable arrays since arithmetic operations over numeric literals have not been implemented in Typescript, yet.
 Workarounds without using numeric literals (e.g. define numbers by recursion) look too hacky and impractical, but any suggestion is welcome!
 
+## Requirements
+
+Typescript >=2.8
+
 ## Bugs and issues
 
 Apparently, the package works as expected for many practical cases.
@@ -34,11 +38,9 @@ d.push('d'); // type error
 
 // define an empty array of strings            
 let e: FixedSizeArray<0, string>;
-// we get an error, but it is not what we want
-// however, in this case void could be a better type
-// why do we want to define an immutable array of zero elements?                    
-e = []; // type error
-e = [] as string[]; // type error
+
+e = []; // ok
+e = [] as string[]; // type error: e has type never[]
 
 // with objects does not work, as wanted
 let o: FixedSizeArray<2, string>;

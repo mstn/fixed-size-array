@@ -11,6 +11,11 @@ d = ['a', true]; // type error
 
 d.push('d'); // type error
 
+let e: FixedSizeArray<0, string>;
+
+e = []; // ok
+e = [] as string[]; // type error
+
 let o: FixedSizeArray<2, string>;
 o = {
   length: 2,
@@ -32,17 +37,17 @@ o = {
 interface Fun<N extends number, M extends number> {
   (a: FixedSizeArray<N, number>): FixedSizeArray<M, number>;
 }
-let f: Fun<2,3>;
+let f: Fun<2, 3>;
 
 // type error
-f = function(v: [number, number]) {
-  return [1,2,3]
+f = function (v: [number, number]) {
+  return [1, 2, 3]
 }
 
-f = function(v: FixedSizeArray<2, number>) {
-  return [1,2,3]
+f = function (v: FixedSizeArray<2, number>) {
+  return [1, 2, 3]
 }
-f([1,2]);
+f([1, 2]);
 
 let g: [number, number];
 let h: FixedSizeArray<2, number>;
