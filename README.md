@@ -86,3 +86,5 @@ f([1,2]);
 ## Credits
 
 We use the same trick to assign a numeric literal to length as it was [done](https://github.com/Microsoft/TypeScript/pull/17765) in TS 2.7 for tuples of fixed size.
+
+Type definition had been simplified as suggested [here](https://github.com/Microsoft/TypeScript/issues/6229#issuecomment-376988681) by @tycho01.
