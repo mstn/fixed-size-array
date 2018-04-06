@@ -13,6 +13,23 @@ Workarounds without using numeric literals (e.g. define numbers by recursion) lo
 
 Typescript >=2.8
 
+## Getting started
+
+Install package
+
+```
+$ npm i fixed-size-array
+```
+
+Use type definitions in your Typescript project
+
+```javascript
+import { FixedSizeArray } from 'fixed-size-array';
+
+let d: FixedSizeArray<2, string>;
+
+```
+
 ## Bugs and issues
 
 Apparently, the package works as expected for many practical cases.
