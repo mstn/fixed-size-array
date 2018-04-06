@@ -1,6 +1,6 @@
 {
   "name": "fixed-size-array",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "typescript types for fixed size arrays",
   "types": "./src/index.d.ts",
   "scripts": {
