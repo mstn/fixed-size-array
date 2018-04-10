@@ -82,6 +82,19 @@ o = {
 
 ## Current problems and limitations
 
+Access to array elements through their indexes will result in a type error.
+
+```javascript
+let d: FixedSizeArray<2, string>;
+
+d = ['a', 'b']; // ok
+d[0] = 'a2'; // ok
+d[1] = 'b2'; // type error, but it is wrong!
+d[2] = 'c2'; // type error
+```
+
+Other more complex cases.
+
 ```javascript
 interface Fun<N extends number, M extends number> {
   (a: FixedSizeArray<N, number>): FixedSizeArray<M, number>;
