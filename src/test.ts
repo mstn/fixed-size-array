@@ -4,11 +4,13 @@ let d: FixedSizeArray<2, string>;
 
 d = ['a', 'b']; // ok
 d[0] = 'a2'; // ok
+d[0] = 0; // type error
 d[1] = 'b2'; // type error, but it is wrong!
 d[2] = 'c2'; // type error
 d = ['a']; // type error
 d = ['a', 'b', 'c']; // type error
 d = ['a', true]; // type error
+d = [true, 'a']; // type error
 
 d.push('d'); // type error
 

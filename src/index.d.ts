@@ -2,6 +2,6 @@
 // N is the length of the array
 // T is the type of array elements
 export type FixedSizeArray<N extends number, T> = N extends 0 ? never[] : {
-    0: any;
+    0: T;
     length: N;
 } & ReadonlyArray<T>;
